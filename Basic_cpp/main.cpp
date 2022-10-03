@@ -108,6 +108,43 @@ int zadacha_4()
     return 0;
 }
 
+/*Даны три точки A, B, C на оси OXY.
+Найти периметр треугольника, построенного по этим точкам.
+Результат вывести с точностью до трех знаков после запятой.*/
+
+double dlinna_otrezka(double p1x, double p1y, double p1z, double p2x,
+                      double p2y, double p2z )
+{
+    return sqrt(pow(p1x - p2x, 2)+ pow(p1y - p2y, 2)+ pow(p1z - p2z, 2));
+}
+
+int zadacha_5()
+{
+    double ax, ay, az = 0, bx, by, bz = 0, cx, cy, cz = 0;
+    double perimetor;
+  
+    cout << "Enter Ax: ";
+    cin >> ax;
+    cout << "Enter Ay: ";
+    cin >> ay;
+    
+    cout << "Enter Bx: ";
+    cin >> bx;
+    cout << "Enter By: ";
+    cin >> by;
+    
+    cout << "Enter Cx: ";
+    cin >> cx;
+    cout << "Enter Cy: ";
+    cin >> cy;
+    
+    perimetor = dlinna_otrezka(ax, ay, az, bx, by, bz)
+                 + dlinna_otrezka(bx, by, bz, cx, cy, cz)
+                 + dlinna_otrezka(cx, cy, cz, ax, ay, az);
+    cout << round(perimetor*1000)/1000 << std::endl;
+    return 0;
+}
+
 int main()
 {
     int number_tasks;
@@ -125,6 +162,9 @@ int main()
     }
     if (number_tasks == 4) {
         zadacha_4();
+    }
+    if (number_tasks == 5) {
+        zadacha_5();
     }
     
 }
