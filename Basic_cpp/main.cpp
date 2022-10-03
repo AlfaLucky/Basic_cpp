@@ -145,6 +145,29 @@ int zadacha_5()
     return 0;
 }
 
+/*Даны три целых числа: A, B, C.
+Проверить истинность высказывания A < B < C.
+Если верное - вывести 1, иначе - 0.*/
+
+int zadacha_6()
+{
+    int a, b, c;
+    
+    cout << "Enter A: ";
+    cin >> a;
+    
+    cout << "Enter B: ";
+    cin >> b;
+    
+    cout << "Enter C: ";
+    cin >> c;
+    
+    if ( a < b && b < c) cout << 1 << endl;
+    else cout << 0 << endl;
+    
+    return 0;
+}
+
 int main()
 {
     int number_tasks;
@@ -165,6 +188,9 @@ int main()
     }
     if (number_tasks == 5) {
         zadacha_5();
+    }
+    if (number_tasks == 6) {
+        zadacha_6();
     }
     
 }
