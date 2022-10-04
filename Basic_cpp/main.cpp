@@ -168,6 +168,30 @@ int zadacha_6()
     return 0;
 }
 
+/*Даны целые числа a, b, c.
+Проверить, существует ли треугольник со сторонами a, b, c.
+Если существует - вывести 1, иначе - 0.*/
+
+int zadacha_7()
+{
+    int a, b, c;
+    
+    cout << "Enter a, b и c: ";
+    cin >> a >> b >> c;
+    if (a > 0 && b > 0 && c > 0) {
+        if ((a < b + c) and (b < a + c) and (c < a + b)) {
+            cout << 1;
+        }
+        else {
+            cout << 0;
+        }
+    }
+    else {
+        cout << 0;
+    }
+    return 0;
+}
+
 int main()
 {
     int number_tasks;
@@ -191,6 +215,9 @@ int main()
     }
     if (number_tasks == 6) {
         zadacha_6();
+    }
+    if (number_tasks == 7) {
+        zadacha_7();
     }
     
 }
