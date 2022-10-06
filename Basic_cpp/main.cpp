@@ -192,6 +192,24 @@ int zadacha_7()
     return 0;
 }
 
+/*Даны целые числа a, b, c.
+Проверить, существует ли треугольник со сторонами a, b, c.
+Если существует - вывести 1, иначе - 0.*/
+
+int zadacha_8()
+{
+    int a, b, sum = 0;
+    
+    cout << "Enter a, b" << endl;
+    cin >> a >> b;
+    for (int i = a; i < b + 1; i++)
+        {
+            sum += i;
+        }
+    cout << "Sum of all integers from A to B inclusive = " << sum <<endl;
+    return 0;
+}
+
 int main()
 {
     int number_tasks;
@@ -218,6 +236,9 @@ int main()
     }
     if (number_tasks == 7) {
         zadacha_7();
+    }
+    if (number_tasks == 8) {
+        zadacha_8();
     }
     
 }
