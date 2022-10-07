@@ -227,6 +227,29 @@ int zadacha_9()
     return 0;
 }
 
+/*Дано целое число N(>0).
+Проверить, является ли оно простым.
+Если да - вывести 1, иначе – 0*/
+
+int zadacha_10()
+{
+    int n, i;
+    bool isPrime = true;
+    cout<<"Enter a N(>0):";
+    cin>>n;
+    for (i=2; i<=(sqrt(abs(n))); i++){
+        if (n%i==0){
+        isPrime = false;
+        break;
+        }
+    }
+    if(isPrime)
+        cout<<"1"<<endl;
+    else
+        cout<<"0"<<endl;
+    return 0;
+}
+
 int main()
 {
     int number_tasks;
@@ -259,6 +282,9 @@ int main()
     }
     if (number_tasks == 9) {
         zadacha_9();
+    }
+    if (number_tasks == 10) {
+        zadacha_10();
     }
     
 }
