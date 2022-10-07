@@ -210,6 +210,23 @@ int zadacha_8()
     return 0;
 }
 
+/*Дано целое число N (>0). Найти сумму
+ N*2 + (N + 1)*2 + (N + 2)*2 + . . . + (2*N)*2 (целое число).*/
+
+int zadacha_9()
+{
+    int n, i;
+    float sum = 0;
+    
+    cout << "Enter n: ";
+    cin >> n;
+    for (i = 0; i <= n; i++) {
+            sum += (n+i)*2;
+    }
+    cout << "Sum N*2 +(N+1)*2 +(N+2)*2 +...+(2*N)*2 = " << sum <<endl;
+    return 0;
+}
+
 int main()
 {
     int number_tasks;
@@ -239,6 +256,9 @@ int main()
     }
     if (number_tasks == 8) {
         zadacha_8();
+    }
+    if (number_tasks == 9) {
+        zadacha_9();
     }
     
 }
