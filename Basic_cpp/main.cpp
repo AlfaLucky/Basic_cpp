@@ -286,6 +286,26 @@ int zadacha_11()
     return 0;
 }
 
+/*Даны два целых числа A и B (A < B).
+Найти сумму всех  чисел кратных 3 и 5 от A до B включительно.*/
+
+int zadacha_12()
+{
+    int a, b, sum = 0;
+    cout << "Enter numbers A and B: ";
+    cin >> a >> b;
+    while (a <= b)
+    {
+         if (a % 3 == 0 && a % 5 == 0)
+         {
+             sum+=a;
+         }
+         a++;
+    }
+    cout << sum << endl;
+    return 0;
+}
+
 int main()
 {
     int number_tasks;
@@ -324,6 +344,9 @@ int main()
     }
     if (number_tasks == 11) {
         zadacha_11();
+    }
+    if (number_tasks == 12) {
+        zadacha_12();
     }
     
 }
