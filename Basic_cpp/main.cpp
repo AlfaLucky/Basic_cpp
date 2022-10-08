@@ -250,6 +250,42 @@ int zadacha_10()
     return 0;
 }
 
+/*Дано целое число N(>0).
+Найти сумму его простых делителей*/
+
+int zadacha_11()
+{
+    int prime_number, sum = 1;
+    if (scanf("%d", &prime_number) == 0)
+    {
+        printf("Incorrect input value");
+    }
+    else
+    {
+        for (int i = 2;i <= prime_number; i++)
+        {
+            int count = 0;
+            if (prime_number % i == 0)
+            {
+                for (int j = 2; j <= i - 1; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        count += 1;
+                        break;
+                    }
+                }
+                if (count == 0)
+                {
+                    sum += i;
+                }
+            }
+        }
+    }
+    printf("%i", sum);
+    return 0;
+}
+
 int main()
 {
     int number_tasks;
@@ -285,6 +321,9 @@ int main()
     }
     if (number_tasks == 10) {
         zadacha_10();
+    }
+    if (number_tasks == 11) {
+        zadacha_11();
     }
     
 }
